@@ -1,4 +1,4 @@
-# IPerf Loopback Testing PoC
+# IPerf network loopback test POC
 
 ## Intro
 
@@ -25,9 +25,9 @@ Some potential benefits for the Service Provider are being in control of the tes
     #
     # Filter to match IPerf traffic and then lookup the iperfTraffic routing-instance
     #
-    set firewall family inet filter iperfFilter term 1 from destination-port 8080
+    set firewall family inet filter iperfFilter term 1 from destination-port 5201
     set firewall family inet filter iperfFilter term 1 then routing-instance iperfTraffic
-    set firewall family inet filter iperfFilter term 2 from source-port 8080
+    set firewall family inet filter iperfFilter term 2 from source-port 5201
     set firewall family inet filter iperfFilter term 2 then routing-instance iperfTraffic
     set firewall family inet filter iperfFilter term 3 then accept
     #
