@@ -11,8 +11,9 @@ Some potential benefits for the Service Provider are being in control of the tes
 
 ## Basic design 
 - IPerf Client and Server are in the same LAN but have static ARP entries to each other via the next hop router (e.g. see “ip neigh add” command)
-- The next hop Juniper router will filter forward any IPerf traffic received from either IPerf host towards the CPE
-- Return traffic from the CPE is sent unicast forwarding
+- The next hop Juniper router will filter forward any IPerf traffic received from either IPerf host towards the CPE via the "WAN"
+- CPE default routes traffic back into the "WAN"
+- Return traffic from the CPE is sent unicast forwarding at the Juniper
 
  ![basic design](https://github.com/lanaash/iperf_loopback_testing/blob/main/iperf_loopback_.testing.png)
 
