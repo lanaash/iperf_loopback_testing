@@ -1,7 +1,6 @@
-# IPerf network loopback test POC
+# IPerf network loopback test
 
-## Intro
-
+## POC
 How you could potentially use an IPerf server and client within a Service Provider infrastructure to test the effective throughput (“goodput”) of a customer Leased Line/Ethernet service.  
 
 This could only really be of value when testing symmetric Ethernet circuits – same upload and download bandwidth - as the customer router (CPE) will be hair pinning the traffic! 
