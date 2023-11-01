@@ -1,4 +1,4 @@
-# IPerf Loopback Tetsing
+# IPerf Loopback Testing PoC
 
 ## Intro
 
@@ -14,7 +14,9 @@ Some potential benefits for the Service Provider are being in control of the tes
 - The next hop Juniper router will filter forward any IPerf traffic received from either IPerf host towards the CPE
 - Return traffic from the CPE is sent unicast forwarding
 
+ ![basic design](https://github.com/lanaash/iperf_loopback_testing/blob/main/iperf_loopback_.testing.png)
 
+  
 ## Example config for JunOS
 
     #
