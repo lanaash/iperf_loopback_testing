@@ -2,14 +2,18 @@
 
 ## Intro
 
-How you could potentially use an IPerf server and client within a Service Provider infrastructure to test the effective throughput (“goodput”) of a customer Leased Line/Ethernet service.
-This could only really be of value when testing symmetric Ethernet circuits – same upload and download bandwidth - as the customer router (CPE) will be hair pinning the traffic!
-Some potential benefits for the Service Provider are being in control of the testing equipment and test results and no remote engineer or customer assistance required.
+How you could potentially use an IPerf server and client within a Service Provider infrastructure to test the effective throughput (“goodput”) of a customer Leased Line/Ethernet service.  
+
+This could only really be of value when testing symmetric Ethernet circuits – same upload and download bandwidth - as the customer router (CPE) will be hair pinning the traffic!  
+
+Some potential benefits for the Service Provider are being in control of the testing equipment and test results and no remote engineer or customer assistance required.  
+
 
 ## Basic design 
-IPerf Client and Server are in the same LAN but have static ARP entries to each other via the next hop router (e.g. see “ip neigh add” command).
-The next hop Juniper router will filter forward any IPerf traffic received from either IPerf host towards the CPE.
-Return traffic from the CPE is sent unicast forwarding.
+- IPerf Client and Server are in the same LAN but have static ARP entries to each other via the next hop router (e.g. see “ip neigh add” command)
+- The next hop Juniper router will filter forward any IPerf traffic received from either IPerf host towards the CPE
+- Return traffic from the CPE is sent unicast forwarding
+
 
 ## Example config for JunOS
 
